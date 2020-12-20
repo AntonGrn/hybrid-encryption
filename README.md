@@ -1,6 +1,22 @@
 # hybrid-encryption
 Distribute symmetric AES keys using asymmetric encryption (PKI)
 
+```
+ ____________________________________________________________________
+|                         |                                          |
+|   Shared secrets for    |       Payload:                           |
+| Symmetric cryptography  |       Initial message                    |
+|_________________________|__________________________________________|
+|            |            |            |            |                |
+|  AES-key   |  MAC-key   |    IV      |    MAC     |    Message     |
+|  128 bit   |  128 bit   |  128 bit   |  128 bit   | Variable size  |
+|____________|____________|____________|____________|________________|
+|                         |            |                             |
+|     Encrypted:          | Plaintext  |        Encrypted:           |
+|    Asymmetric (RSA)     |            |      Symmetric (AES)        |
+|_________________________|____________|_____________________________|
+```
+
 Distribute symmetric keys and pass initial message from client to server [1-11]
 
 
