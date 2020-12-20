@@ -46,13 +46,13 @@ within the session will use symmetric cryptography (symmetric keys has been dist
 
 Distribute symmetric keys and pass initial message from client to server [1-11]
 
-
-**[1-2] SERVER**
-
 Preconditions: 
 - Client has requested connection with server (e.g. Socket TCP handshake)
 - Client is launched on new client thread (if multi-client server)
 - Client thread holds unique instance of ServerCryptography
+
+**[1-2] SERVER**
+
 ```java
 serverCryptography.generateAsymmericKeyPair()
 byte[] publicKey = serverCryptography.getPublicKeyAsByteArray()
