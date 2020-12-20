@@ -52,7 +52,7 @@ Unique secret keys are distributed using asymmetric encryption (RSA) at the init
 |            |                               |
 | Plaintext  |  Encrypted: Symmetric (AES)   |
 |____________|_______________________________|
-Encrypted messages after symmetric keys has been distributed
+[12] Encrypted messages after symmetric keys has been distributed
 (For CBC: IV can securely be sent in plaintext)
 ```
 
