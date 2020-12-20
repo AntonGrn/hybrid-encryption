@@ -8,11 +8,11 @@ SOLUTION: Distribute symmetric keys using asymmetric cryptography (RSA).
           
 **CLIENT**
 
-1. Client requests Socket connection with server.
+**1.** Client requests Socket connection with server.
 
 **SERVER**
 
-2. Server sends its public key (asymmetric) to client.
+**2.** Server sends its public key (asymmetric) to client.
 
 **CLIENT**
 
