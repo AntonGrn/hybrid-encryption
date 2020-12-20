@@ -44,7 +44,7 @@ Unique secret keys are distributed using asymmetric encryption (RSA) at the init
 **ENCRYPTED CHANNEL ESTABLISHED (symmetric keys distributed and verified)**</br>
 **12.** The continuous communication between client and server within the session will use symmetric cryptography (AES).</br>
 ``` 
- __________________________________________
+ ____________________________________________
 |            |            |                  |
 |    IV      |    MAC     |     Message      |
 |  128 bit   |  128 bit   |  Variable size   |
