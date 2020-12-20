@@ -5,7 +5,7 @@ Distribute symmetric AES keys using asymmetric encryption (PKI)
 **PROBLEM:**  Distribute symmetric (secret) AES key in secure way.</br>
 **SOLUTION:** Distribute symmetric keys using asymmetric cryptography (RSA).</br>
 
-**APPROACH:**
+## APPROACH:
           
 **CLIENT**</br>
 **1.** Client requests connection with server (e.g. TCP handshake).</br>
