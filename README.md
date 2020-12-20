@@ -5,6 +5,18 @@ GOAL:     Use symmetric cryptography for the client-server communication.
 PROBLEM:  Distribute symmetric (secret) AES key in secure way.
 SOLUTION: Distribute symmetric keys using asymmetric cryptography (RSA).
           = Hybrid encryption
+          
+**CLIENT**</br>
+1. Client requests Socket connection with server.
+**SERVER
+2. Server sends its public key (asymmetric) to client.
+**CLIENT
+3. Client generates AES key, IV, MAC-key (for symmetric cryptography).
+4. Client encrypts AES key, IV, MAC-key using server's public key (asymmetric encryption).
+5. Client encrypts login data (payload) with AES-key, IV (symmetric encryption).
+6. Client generates MAC of the payload.
+7. Client sends encrypted its first msg: AES-key, IV, MAC-key, payload, MAC to server.
+
 
 APPROACH:
 ``` 
