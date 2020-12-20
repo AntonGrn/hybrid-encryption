@@ -1,9 +1,9 @@
 # Hybrid Encryption
 Distribute symmetric AES keys using asymmetric encryption (PKI)
 
-**GOAL:**    Use symmetric cryptography for the client-server communication.</br>
-**PROBLEM:**  Distribute symmetric (secret) AES key in secure way.</br>
-**SOLUTION:** Distribute symmetric keys using asymmetric cryptography (RSA).</br>
+**GOAL:**    Use symmetric cryptography (AES) for the client-server communication.</br>
+**PROBLEM:**  Distribute symmetric key (AES) in secure way.</br>
+**SOLUTION:** Distribute symmetric keys (AES) using asymmetric cryptography (RSA).</br>
 
 ## APPROACH:
           
