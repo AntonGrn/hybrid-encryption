@@ -1,9 +1,9 @@
 # hybrid-encryption
 Distribute symmetric AES keys using asymmetric encryption (PKI)
 
-GOAL:     Use symmetric cryptography for the client-server communication.
-PROBLEM:  Distribute symmetric (secret) AES key in secure way.
-SOLUTION: Distribute symmetric keys using asymmetric cryptography (RSA).
+**GOAL:**    Use symmetric cryptography for the client-server communication.</br>
+**PROBLEM:**  Distribute symmetric (secret) AES key in secure way.</br>
+**SOLUTION:** Distribute symmetric keys using asymmetric cryptography (RSA).</br>
           = Hybrid encryption
           
 **CLIENT**</br>
@@ -32,6 +32,14 @@ SOLUTION: Distribute symmetric keys using asymmetric cryptography (RSA).
 |_________________________|____________|_____________________________|
 [7] Initial message sent from client to server
 ``` 
+**SERVER**</br>
+**8.** Server decrypts AES-key, IV, MAC-key with Server's private key (asymmetric decryption).</br>
+**9.** Server assigns the symmetric key variables (AES-key, IV, MAC-key).</br>
+**10.** Server decrypts the payload using the symmetric key variables (symmetric decryption).</br>
+**11.** Server verifies MAC.</br>
+**ENCRYPTED CHANNEL ESTABLISHED**</br>
+**12.** If verification is successful; the continuous communication between client and server</br>
+within the session will use symmetric cryptography (symmetric keys has been distributed).</br>
 
 APPROACH:
 ``` 
