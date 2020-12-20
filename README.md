@@ -1,8 +1,7 @@
 # hybrid-encryption
 Distribute symmetric AES keys using asymmetric encryption (PKI)
 
-```
- ____________________________________________________________________
+``` ____________________________________________________________________
 |                         |                                          |
 |   Shared secrets for    |       Payload:                           |
 | Symmetric cryptography  |       Initial message                    |
