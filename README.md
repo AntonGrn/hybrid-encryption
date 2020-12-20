@@ -41,6 +41,8 @@ ENCRYPTED CHANNEL ESTABLISHED
 12. If verification is successful; the continuous communication between client and server
 within the session will use symmetric cryptography (symmetric keys has been distributed).
 ```
+5. ggggg
+6. ggggg
 
 Distribute symmetric keys and pass initial message from client to server [1-11]
 
