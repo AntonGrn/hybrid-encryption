@@ -8,7 +8,6 @@ SERVER
 [On new client thread]
 Precondition: Client has requested connection with server (e.g. Socket TCP handshake)
 
-ServerCryptography serverCryptography = new ServerCryptography();
 serverCryptography.generateAsymmericKeyPair()
 byte[] publicKey = serverCryptography.getPublicKeyAsByteArray()
 
@@ -18,22 +17,30 @@ CLIENT
 
 Read from server: byte[] publicKey
 
-ClientCryptograhy clientCryptography = new ClientCryptograhy();
 clientCryptography.setServersPublicKey(publicKey);
 clientCryptography.generateSymmetricKeys();
-String initialOutputMsg = "Hello World!"; // E.g. login credentials
-byte[] encryptedMsg = clientCryptography.createInitalMessage(initialOutputMsg);
+byte[] encryptedMsg = clientCryptography.createInitialMsg("Hello World!");
 
 Write to server: byte[] encryptedMsg
 
 SERVER
 
-Read from client: byte[] encryptedInput
+Read from client: byte[] encryptedMsg
 
-String intialMsg = processInitialClientInput(encryptedInput);
+String intialMsg = processInitialInputMsg(encryptedMsg);
 
 
 
 ```
 
 Symmetric encyption (12->)
+Encrypted traffic may now flow asynchronous in full-duplex
+
+```java
+SERVER
+Read from client: byte[] encryptedInput;
+String decrytpedMsg = serverCryptography.symmetricDecryption(encryptedInput);
+byte[] encryptedOutput = serverCryptography.symmetricEncryption("My message");
+Write to client: byte[] encryptedOutput
+
+```
