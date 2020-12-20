@@ -20,7 +20,8 @@ Distribute symmetric AES keys using asymmetric encryption (PKI)
 Distribute symmetric keys and pass initial message from client to server [1-11]
 
 
-[1-2] SERVER
+**[1-2] SERVER**
+
 Preconditions: 
 - Client has requested connection with server (e.g. Socket TCP handshake)
 - Client is launched on new client thread (if multi-client server)
@@ -32,7 +33,7 @@ byte[] publicKey = serverCryptography.getPublicKeyAsByteArray()
 //Write to client: byte[] publicKey
 ```
 
-[3-7] CLIENT
+**[3-7] CLIENT**
 ```java
 //Read from server: byte[] publicKey
 
@@ -43,7 +44,7 @@ byte[] encryptedMsg = clientCryptography.createInitialMsg("Hello World!");
 //Write to server: byte[] encryptedMsg
 ```
 
-[8-11] SERVER
+**[8-11] SERVER**
 
 
 ```java
@@ -52,7 +53,7 @@ byte[] encryptedMsg = clientCryptography.createInitialMsg("Hello World!");
 String intialMsg = processInitialInputMsg(encryptedMsg);
 ```
 
-Symmetric encyption (12->)
+**Symmetric encyption (12->)**
 Encrypted traffic may now flow asynchronous in full-duplex
 
 ```java
