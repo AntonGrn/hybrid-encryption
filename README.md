@@ -7,8 +7,7 @@ SOLUTION: Distribute symmetric keys using asymmetric cryptography (RSA).
           = Hybrid encryption
 
 APPROACH:
-
-
+``` 
 CLIENT -> SERVER
 1. Client requests Socket connection with server.
 SERVER -> CLIENT
@@ -19,7 +18,7 @@ CLIENT -> SERVER
 5. Client encrypts login data (payload) with AES-key, IV (symmetric encryption).
 6. Client generates MAC of the payload.
 7. Client sends encrypted its first msg: AES-key, IV, MAC-key, payload, MAC to server.
-``` 
+
  ____________________________________________________________________
 |                         |                                          |
 |   Shared secrets for    |       Payload:                           |
@@ -33,7 +32,7 @@ CLIENT -> SERVER
 |     Encrypted:          | Plaintext  |        Encrypted:           |
 |    Asymmetric (RSA)     |            |      Symmetric (AES)        |
 |_________________________|____________|_____________________________|
-```
+
 SERVER
 8. Server decrypts AES-key, IV, MAC-key with Server's private key (asymmetric decryption).
 9. Server assigns the symmetric key variables (AES-key, IV, MAC-key).
@@ -42,6 +41,7 @@ SERVER
 ENCRYPTED CHANNEL ESTABLISHED
 12. If verification is successful; the continuous communication between client and server
 within the session will use symmetric cryptography (symmetric keys has been distributed).
+```
 
 
 Distribute symmetric keys and pass initial message from client to server [1-11]
