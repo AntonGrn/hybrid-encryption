@@ -8,9 +8,9 @@ SOLUTION: Distribute symmetric keys using asymmetric cryptography (RSA).
           
 **CLIENT**</br>
 1. Client requests Socket connection with server.
-**SERVER
+**SERVER**</br>
 2. Server sends its public key (asymmetric) to client.
-**CLIENT
+**CLIENT**</br>
 3. Client generates AES key, IV, MAC-key (for symmetric cryptography).
 4. Client encrypts AES key, IV, MAC-key using server's public key (asymmetric encryption).
 5. Client encrypts login data (payload) with AES-key, IV (symmetric encryption).
