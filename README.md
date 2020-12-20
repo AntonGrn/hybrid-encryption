@@ -1,4 +1,4 @@
-# hybrid-encryption
+# Hybrid Encryption
 Distribute symmetric AES keys using asymmetric encryption (PKI)
 
 **GOAL:**    Use symmetric cryptography for the client-server communication.</br>
