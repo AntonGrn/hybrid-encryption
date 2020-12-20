@@ -38,8 +38,9 @@ byte[] publicKey = serverCryptography.getPublicKeyAsByteArray()
 clientCryptography.setServersPublicKey(publicKey);
 clientCryptography.generateSymmetricKeys();
 byte[] encryptedMsg = clientCryptography.createInitialMsg("Hello World!");
+
+//Write to server: byte[] encryptedMsg
 ```
-**Write to server:** byte[] encryptedMsg
 
 [8-11] SERVER
 
