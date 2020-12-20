@@ -20,7 +20,7 @@ Distribute symmetric AES keys using asymmetric encryption (PKI)
 Distribute symmetric keys and pass initial message from client to server [1-11]
 
 
-SERVER
+[1-2] SERVER
 Preconditions: 
 - Client has requested connection with server (e.g. Socket TCP handshake)
 - Client is launched on new client thread (if multi-client server)
