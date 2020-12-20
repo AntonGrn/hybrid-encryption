@@ -16,7 +16,7 @@ SOLUTION: Distribute symmetric keys using asymmetric cryptography (RSA).
 
 **CLIENT**
 
-**3.** Client generates AES key, IV, MAC-key (for symmetric cryptography).
+**3.** Client generates AES key, IV, MAC-key (for symmetric cryptography).</br>
 **4.** Client encrypts AES key, IV, MAC-key using server's public key (asymmetric encryption).
 **5.** Client encrypts login data (payload) with AES-key, IV (symmetric encryption).
 **6.** Client generates MAC of the payload.
