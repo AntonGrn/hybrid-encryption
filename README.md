@@ -6,22 +6,16 @@ PROBLEM:  Distribute symmetric (secret) AES key in secure way.
 SOLUTION: Distribute symmetric keys using asymmetric cryptography (RSA).
           = Hybrid encryption
           
-**CLIENT**
-
-**1.** Client requests connection with server (e.g. TCP handshake).
-
-**SERVER**
-
-**2.** Server sends its public key (asymmetric) to client.
-
-**CLIENT**
-
+**CLIENT**</br>
+**1.** Client requests connection with server (e.g. TCP handshake).</br>
+**SERVER**</br>
+**2.** Server sends its public key (asymmetric) to client.</br>
+**CLIENT**</br>
 **3.** Client generates AES key, IV, MAC-key (for symmetric cryptography).</br>
-**4.** Client encrypts AES key, IV, MAC-key using server's public key (asymmetric encryption).
-**5.** Client encrypts login data (payload) with AES-key, IV (symmetric encryption).
-**6.** Client generates MAC of the payload.
-**7.** Client sends encrypted its first msg: AES-key, IV, MAC-key, payload, MAC to server.
-
+**4.** Client encrypts AES key, IV, MAC-key using server's public key (asymmetric encryption).</br>
+**5.** Client encrypts login data (payload) with AES-key, IV (symmetric encryption).</br>
+**6.** Client generates MAC of the payload.</br>
+**7.** Client sends encrypted its first msg: AES-key, IV, MAC-key, payload, MAC to server.</br>
 
 APPROACH:
 ``` 
