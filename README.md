@@ -4,7 +4,8 @@ Distribute symmetric AES keys using asymmetric encryption (PKI)
 **GOAL:**    Use symmetric cryptography for the client-server communication.</br>
 **PROBLEM:**  Distribute symmetric (secret) AES key in secure way.</br>
 **SOLUTION:** Distribute symmetric keys using asymmetric cryptography (RSA).</br>
-          = Hybrid encryption
+
+**APPROACH:**
           
 **CLIENT**</br>
 **1.** Client requests connection with server (e.g. TCP handshake).</br>
