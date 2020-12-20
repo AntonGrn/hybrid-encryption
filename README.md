@@ -5,7 +5,7 @@ Distribute symmetric keys and pass initial message from client to server [1-11]
 
 ```java
 SERVER
-[On new client thread]
+[On new client thread: Create new instance of ServerCryptography - unique for that thread]
 Precondition: Client has requested connection with server (e.g. Socket TCP handshake)
 
 serverCryptography.generateAsymmericKeyPair()
