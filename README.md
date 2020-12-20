@@ -3,7 +3,7 @@ Distribute symmetric AES keys using asymmetric encryption (PKI)
 
 Distribute symmetric keys and pass initial message from client to server [1-11]
 
-´´´java
+```java
 SERVER
 [On new client thread]
 Precondition: Client has requested connection with server (e.g. Socket TCP handshake)
@@ -34,6 +34,6 @@ String intialMsg = processInitialClientInput(encryptedInput);
 
 
 
-´´´
+```
 
 Symmetric encyption (12->)
