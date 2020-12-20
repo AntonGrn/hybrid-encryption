@@ -52,6 +52,7 @@ Preconditions:
 - Client has requested connection with server (e.g. Socket TCP handshake)
 - Client is launched on new client thread (if multi-client server)
 - Client thread holds unique instance of ServerCryptography
+  - Allowing unique encryption for each client session.
 ```java
 serverCryptography.generateAsymmericKeyPair()
 byte[] publicKey = serverCryptography.getPublicKeyAsByteArray()
