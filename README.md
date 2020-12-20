@@ -12,9 +12,9 @@ Preconditions:
 ```java
 serverCryptography.generateAsymmericKeyPair()
 byte[] publicKey = serverCryptography.getPublicKeyAsByteArray()
-
-Write to client: byte[] publicKey
-
+```
+**Write to client:** byte[] publicKey
+```java
 CLIENT
 
 Read from server: byte[] publicKey
