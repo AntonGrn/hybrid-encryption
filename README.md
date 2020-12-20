@@ -30,11 +30,11 @@ serverCryptography.generateAsymmericKeyPair()
 byte[] publicKey = serverCryptography.getPublicKeyAsByteArray()
 ```
 **Write to client:** byte[] publicKey
+
+[3-7] CLIENT
+
+**Read from server:** byte[] publicKey
 ```java
-CLIENT
-
-Read from server: byte[] publicKey
-
 clientCryptography.setServersPublicKey(publicKey);
 clientCryptography.generateSymmetricKeys();
 byte[] encryptedMsg = clientCryptography.createInitialMsg("Hello World!");
