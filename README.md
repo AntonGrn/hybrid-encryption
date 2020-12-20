@@ -8,30 +8,17 @@ SOLUTION: Distribute symmetric keys using asymmetric cryptography (RSA).
 
 APPROACH:
 
+``` 
 CLIENT -> SERVER
 1.  Client requests Socket connection with server.
-
 SERVER -> CLIENT
 2.  Server sends its public key (asymmetric) to client.
-
 CLIENT -> SERVER
 3.  Client generates AES key, IV, MAC-key (for symmetric cryptography).
 4.  Client encrypts AES key, IV, MAC-key using server's public key (asymmetric encryption).
 5.  Client encrypts login data (payload) with AES-key, IV (symmetric encryption).
 6.  Client generates MAC of the payload.
 7.  Client sends encrypted its first msg: AES-key, IV, MAC-key, payload, MAC to server.
-
-SERVER
-8.  Server decrypts AES-key, IV, MAC-key with Server's private key (asymmetric decryption).
-9.  Server assigns the symmetric key variables (AES-key, IV, MAC-key).
-10. Server decrypts the payload using the symmetric key variables (symmetric decryption).
-11. Server verifies MAC.
-
-ENCRYPTED CHANNEL ESTABLISHED
-12. If verification is successful; the continuous communication between client and server
-within the session will use symmetric cryptography (symmetric keys has been distributed).
-
-``` 
  ____________________________________________________________________
 |                         |                                          |
 |   Shared secrets for    |       Payload:                           |
@@ -45,6 +32,14 @@ within the session will use symmetric cryptography (symmetric keys has been dist
 |     Encrypted:          | Plaintext  |        Encrypted:           |
 |    Asymmetric (RSA)     |            |      Symmetric (AES)        |
 |_________________________|____________|_____________________________|
+SERVER
+8.  Server decrypts AES-key, IV, MAC-key with Server's private key (asymmetric decryption).
+9.  Server assigns the symmetric key variables (AES-key, IV, MAC-key).
+10. Server decrypts the payload using the symmetric key variables (symmetric decryption).
+11. Server verifies MAC.
+ENCRYPTED CHANNEL ESTABLISHED
+12. If verification is successful; the continuous communication between client and server
+within the session will use symmetric cryptography (symmetric keys has been distributed).
 ```
 
 Distribute symmetric keys and pass initial message from client to server [1-11]
