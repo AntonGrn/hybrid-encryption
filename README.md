@@ -8,11 +8,11 @@ SOLUTION: Distribute symmetric keys using asymmetric cryptography (RSA).
 
 APPROACH:
 ``` 
-CLIENT -> SERVER
+CLIENT
 1. Client requests Socket connection with server.
-SERVER -> CLIENT
+SERVER
 2. Server sends its public key (asymmetric) to client.
-CLIENT -> SERVER
+CLIENT
 3. Client generates AES key, IV, MAC-key (for symmetric cryptography).
 4. Client encrypts AES key, IV, MAC-key using server's public key (asymmetric encryption).
 5. Client encrypts login data (payload) with AES-key, IV (symmetric encryption).
@@ -32,6 +32,7 @@ CLIENT -> SERVER
 |     Encrypted:          | Plaintext  |        Encrypted:           |
 |    Asymmetric (RSA)     |            |      Symmetric (AES)        |
 |_________________________|____________|_____________________________|
+Initial message sent from client to server
 
 SERVER
 8. Server decrypts AES-key, IV, MAC-key with Server's private key (asymmetric decryption).
@@ -41,6 +42,17 @@ SERVER
 ENCRYPTED CHANNEL ESTABLISHED
 12. If verification is successful; the continuous communication between client and server
 within the session will use symmetric cryptography (symmetric keys has been distributed).
+
+ __________________________________________
+|            |            |                  |
+|    IV      |    MAC     |     Message      |
+|  128 bit   |  128 bit   |  Variable size   |
+|____________|____________|__________________|
+|            |                               |
+| Plaintext  |  Encrypted: Symmetric (AES)   |
+|____________|_______________________________|
+Encrypted messages after symmetric keys has been distributed
+(For CBC: IV can securely be sent in plaintext)
 ```
 
 
