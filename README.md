@@ -30,7 +30,7 @@ SOLUTION: Distribute symmetric keys using asymmetric cryptography (RSA).
 |     Encrypted:          | Plaintext  |        Encrypted:           |
 |    Asymmetric (RSA)     |            |      Symmetric (AES)        |
 |_________________________|____________|_____________________________|
-Initial message sent from client to server
+[7] Initial message sent from client to server
 ``` 
 
 APPROACH:
