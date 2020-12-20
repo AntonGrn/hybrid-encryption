@@ -1,6 +1,9 @@
 # Hybrid Encryption
 Distribute symmetric AES keys using asymmetric encryption (PKI)
 
+Symmetric encrypition (AES with CBC) and message authentication (MAC).
+Unique secret keys are distributed using asymmetric encryption (RSA) at the initialization of each TCP session
+
 **GOAL:**    Use symmetric cryptography (AES) for the client-server communication.</br>
 **PROBLEM:**  Distribute symmetric key (AES) in secure way.</br>
 **SOLUTION:** Distribute symmetric keys (AES) using asymmetric cryptography (RSA).</br>
