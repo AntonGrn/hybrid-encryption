@@ -41,9 +41,8 @@ Unique secret keys are distributed using asymmetric encryption (RSA) at the init
 **9.** Server assigns the symmetric key variables (AES-key, IV, MAC-key).</br>
 **10.** Server decrypts the payload using the symmetric key variables (symmetric decryption).</br>
 **11.** Server verifies MAC.</br>
-**ENCRYPTED CHANNEL ESTABLISHED**</br>
-**12.** If verification is successful; the continuous communication between client and server</br>
-within the session will use symmetric cryptography (symmetric keys has been distributed).</br>
+**ENCRYPTED CHANNEL ESTABLISHED (symmetric keys distributed and verified)**</br>
+**12.** The continuous communication between client and server within the session will use symmetric cryptography (AES).</br>
 ``` 
  __________________________________________
 |            |            |                  |
