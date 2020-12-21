@@ -1,7 +1,7 @@
 # Hybrid Encryption
 Distribute symmetric AES keys using asymmetric encryption (PKI)
 
-Symmetric encrypition (AES with CBC) and message authentication (MAC).
+Symmetric encryption (AES with CBC) and message authentication (MAC).
 Unique secret keys are distributed using asymmetric encryption (RSA) at the initialization of each TCP session
 
 **GOAL:**    Use symmetric cryptography (AES) for the client-server communication.</br>
@@ -57,8 +57,8 @@ Unique secret keys are distributed using asymmetric encryption (RSA) at the init
 ```
 ## USER GUIDE:
 
-In relation to above description:
-[1-11] Distribute symmetric keys and pass initial message from client to server
+In relation to above description:</br>
+[1-11] Distribute symmetric keys and pass initial message from client to server</br>
 [12] Symmetric encryption
 
 **[1-2] SERVER**
@@ -95,7 +95,7 @@ byte[] encryptedMsg = clientCryptography.createInitialMsg("Hello World!");
 String intialMsg = processInitialInputMsg(encryptedMsg);
 ```
 
-**[12] Symmetric encyption**
+**[12] Symmetric encyption**</br>
 Encrypted traffic may now flow asynchronous in full-duplex
 
 ```java
