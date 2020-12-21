@@ -8,7 +8,7 @@
 **PROBLEM:**  Distribute symmetric key (AES) in secure way.</br>
 **SOLUTION:** Distribute symmetric keys (AES) using asymmetric cryptography (RSA).</br>
 
-## APPROACH:
+## APPROACH (STEPS):
           
 **CLIENT**</br>
 **1.** Client requests connection with server (e.g. TCP handshake).</br>
