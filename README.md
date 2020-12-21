@@ -93,7 +93,7 @@ byte[] encryptedMsg = clientCryptography.createInitialMsg("Hello World!");
 String intialMsg = serverCryptography.processInitialInputMsg(encryptedMsg);
 ```
 
-**[12] Symmetric encyption**</br>
+**[12] Symmetric cryptography**</br>
 Encrypted traffic may now flow asynchronous in full-duplex
 
 ```java
