@@ -57,7 +57,9 @@ Unique secret keys are distributed using asymmetric encryption (RSA) at the init
 ```
 ## USER GUIDE:
 
-Distribute symmetric keys and pass initial message from client to server [1-11]
+In relation to above description:
+[1-11] Distribute symmetric keys and pass initial message from client to server
+[12] Symmetric encryption
 
 **[1-2] SERVER**
 
