@@ -104,11 +104,13 @@ SERVER
 String decrytpedInput = serverCryptography.symmetricDecryption(encryptedInput);
 byte[] encryptedOutput = serverCryptography.symmetricEncryption("My message");
 // Write to client: byte[] encryptedOutput
+[...]
 
 CLIENT
 // Read from server: byte[] encryptedInput;
 String decrytpedInput = clientCryptography.symmetricDecryption(encryptedInput);
 byte[] encryptedOutput = clientCryptography.symmetricEncryption("My message");
 // Write to server: byte[] encryptedOutput
+[...]
 
 ```
