@@ -98,9 +98,15 @@ Encrypted traffic may now flow asynchronous in full-duplex
 
 ```java
 SERVER
-Read from client: byte[] encryptedInput;
-String decrytpedMsg = serverCryptography.symmetricDecryption(encryptedInput);
+// Read from client: byte[] encryptedInput;
+String decrytpedInput = serverCryptography.symmetricDecryption(encryptedInput);
 byte[] encryptedOutput = serverCryptography.symmetricEncryption("My message");
-Write to client: byte[] encryptedOutput
+// Write to client: byte[] encryptedOutput
+
+CLIENT
+// Read from server: byte[] encryptedInput;
+String decrytpedInput = clientCryptography.symmetricDecryption(encryptedInput);
+byte[] encryptedOutput = clientCryptography.symmetricEncryption("My message");
+// Write to server: byte[] encryptedOutput
 
 ```
