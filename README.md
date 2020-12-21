@@ -96,7 +96,7 @@ String intialMsg = serverCryptography.processInitialInputMsg(encryptedMsg);
 ```
 
 **[12] Symmetric cryptography**</br>
-Encrypted traffic may now flow asynchronous in full-duplex
+Encrypted traffic may now flow asynchronous in full-duplex, using the following methods:
 
 ```java
 SERVER
