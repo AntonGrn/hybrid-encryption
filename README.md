@@ -55,7 +55,7 @@ Unique secret keys are distributed using asymmetric encryption (RSA) at the init
 [12] Encrypted messages after symmetric keys has been distributed
 (For CBC: IV can securely be sent in plaintext)
 ```
-
+## USER GUIDE:
 
 Distribute symmetric keys and pass initial message from client to server [1-11]
 
@@ -65,7 +65,7 @@ Preconditions:
 - Client has requested connection with server (e.g. Socket TCP handshake)
 - Client is launched on new client thread (if multi-client server)
 - Client thread holds unique instance of ServerCryptography
-  - Allowing unique encryption for each client session.
+  - Allowing unique encryption credentials (RSA & AES) for each client session.
 ```java
 serverCryptography.generateAsymmericKeyPair()
 byte[] publicKey = serverCryptography.getPublicKeyAsByteArray()
