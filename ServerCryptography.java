@@ -17,9 +17,8 @@ public class ServerCryptography {
     // Note: Keys should be stored in a secure file (key store)
 
     public void generateAsymmetricKeyPair() throws NoSuchAlgorithmException {
-        //KeyPairGenerator keyGenerator = KeyPairGenerator.getInstance("RSA");
         KeyPairGenerator keyGenerator = KeyPairGenerator.getInstance("RSA");
-        keyGenerator.initialize(1024); // bits. Maybe increase key size?
+        keyGenerator.initialize(1024); // bits. Possible to increase key size.
         KeyPair keyPair = keyGenerator.generateKeyPair();
         privateKey = keyPair.getPrivate();
         publicKey = keyPair.getPublic();
