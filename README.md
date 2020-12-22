@@ -2,7 +2,7 @@
 - Symmetric encryption (AES with CBC) and message authentication (MAC).
 - Unique secret keys are distributed using asymmetric encryption (RSA) at the initialization of each TCP session
 
-## MOTIVATION:
+### MOTIVATION:
 
 **GOAL:**    Use symmetric cryptography (AES) for the client-server communication.</br>
 **PROBLEM:**  Distribute symmetric key (AES) in secure way.</br>
