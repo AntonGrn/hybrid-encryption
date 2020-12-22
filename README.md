@@ -63,9 +63,8 @@ Chronological operations in relation to above notations.
 **[1-2] SERVER**
 
 Preconditions: 
-- Client has requested connection with server (e.g. Socket TCP handshake)
-- Client is launched on new client thread (if multi-client server)
-- Client thread (on server) holds unique instance of ServerCryptography
+- Client has requested connection with server (e.g. Socket TCP handshake).
+- Each client instance (on server) is mapped to, or holds, unique instance of ServerCryptography.
   - Allowing unique encryption credentials (RSA & AES) for each client session.
 ```java
 serverCryptography.generateAsymmericKeyPair()
