@@ -1,6 +1,6 @@
 # Hybrid Encryption
 - Symmetric encryption (AES with CBC) and message authentication (MAC).
-- Unique secret keys are distributed using asymmetric encryption (RSA) at the initialization of each TCP session
+- Unique secret keys are distributed using asymmetric encryption (RSA) at the initialization of each TCP session.
 
 ## MOTIVATION:
 
@@ -13,13 +13,13 @@
 **CLIENT**</br>
 **1.** Client requests connection with server (e.g. TCP handshake).</br>
 **SERVER**</br>
-**2.** Server sends its public key (asymmetric) to client.</br>
+**2.** Server sends public key to client (asymmetric).</br>
 **CLIENT**</br>
 **3.** Client generates AES key, IV, MAC-key (for symmetric cryptography).</br>
-**4.** Client encrypts AES key, IV, MAC-key using server's public key (asymmetric encryption).</br>
-**5.** Client encrypts initial message (payload) with AES-key, IV (symmetric encryption).</br>
+**4.** Client encrypts AES key and MAC-key using server's public key (asymmetric encryption).</br>
+**5.** Client encrypts initial message (payload) using AES-key and IV (symmetric encryption).</br>
 **6.** Client generates MAC of the payload.</br>
-**7.** Client sends encrypted its first msg: AES-key, IV, MAC-key, payload, MAC to server.</br>
+**7.** Client sends first message to server: AES-key, MAC-key, IV, MAC, payload.</br>
 ```
  ____________________________________________________________________
 |                         |                                          |
@@ -37,7 +37,7 @@
 [7] Initial message sent from client to server
 ``` 
 **SERVER**</br>
-**8.** Server decrypts AES-key, IV, MAC-key with Server's private key (asymmetric decryption).</br>
+**8.** Server decrypts AES-key and MAC-key with Server's private key (asymmetric decryption).</br>
 **9.** Server assigns the symmetric key variables (AES-key, IV, MAC-key).</br>
 **10.** Server decrypts the payload using the symmetric key variables (symmetric decryption).</br>
 **11.** Server verifies MAC.</br>
