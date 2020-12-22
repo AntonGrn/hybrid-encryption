@@ -1,4 +1,5 @@
-# Hybrid Encryption for Client-Server communication
+# Hybrid Encryption
+For Client-Server communication.
 - Symmetric encryption (AES with CBC) and message authentication (MAC).
 - Symmetric keys are distributed using asymmetric encryption (RSA).
 - Unique keys are generated for each new TCP session.
