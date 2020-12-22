@@ -16,9 +16,9 @@
 **SERVER**</br>
 **2.** Server sends public key to client (asymmetric).</br>
 **CLIENT**</br>
-**3.** Client generates AES key, IV and MAC-key (for symmetric cryptography).</br>
+**3.** Client generates AES key, IV and MAC-key (for symmetric encryption).</br>
 **4.** Client encrypts AES key and MAC-key using server's public key (asymmetric encryption).</br>
-**5.** Client encrypts initial message (payload) using AES-key and IV (symmetric encryption).</br>
+**5.** Client encrypts initial output message (payload) using AES-key and IV (symmetric encryption).</br>
 **6.** Client generates MAC of the payload.</br>
 **7.** Client sends first message to server: AES-key, MAC-key, IV, MAC, payload.</br>
 ```
@@ -58,9 +58,7 @@
 ```
 ## USER GUIDE:
 
-In relation to above description:</br>
-[1-11] Distribute symmetric keys and pass initial message from client to server</br>
-[12] Symmetric encryption
+Chronological operations in relation to above notations.
 
 **[1-2] SERVER**
 
