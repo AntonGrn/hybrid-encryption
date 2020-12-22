@@ -115,4 +115,4 @@ byte[] encryptedOutput = clientCryptography.symmetricEncryption("My message");
 
 ## COMPLEMENT WITH:
 - Key store
-- Certificates and digitial signatures
+- Certificate and digitial signatures
