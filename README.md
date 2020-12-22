@@ -60,7 +60,7 @@
 
 Chronological operations in relation to above notations.
 
-**[1-2] SERVER**
+### [1-2] SERVER
 
 Preconditions: 
 - Client has requested connection with server (e.g. Socket TCP handshake).
