@@ -20,7 +20,7 @@
 **4.** Client encrypts AES key and MAC-key using server's public key (asymmetric encryption).</br>
 **5.** Client encrypts initial output message (payload) using AES-key and IV (symmetric encryption).</br>
 **6.** Client generates MAC of the payload.</br>
-**7.** Client sends first message to server: AES-key, MAC-key, IV, MAC, payload.</br>
+**7.** Client sends first message to server: AES-key, MAC-key, IV, MAC, message.</br>
 ```
  ____________________________________________________________________
 |                         |                                          |
@@ -39,7 +39,7 @@
 ``` 
 **SERVER**</br>
 **8.** Server decrypts AES-key and MAC-key with Server's private key (asymmetric decryption).</br>
-**9.** Server assigns the symmetric key variables (AES-key, IV, MAC-key).</br>
+**9.** Server assigns the symmetric key variables (AES-key, MAC-key, IV).</br>
 **10.** Server decrypts the payload using the symmetric key variables (symmetric decryption).</br>
 **11.** Server verifies MAC.</br>
 **ENCRYPTED CHANNEL ESTABLISHED (symmetric keys distributed)**</br>
