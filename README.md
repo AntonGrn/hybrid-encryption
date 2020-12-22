@@ -42,7 +42,7 @@
 **9.** Server assigns the symmetric key variables (AES-key, IV, MAC-key).</br>
 **10.** Server decrypts the payload using the symmetric key variables (symmetric decryption).</br>
 **11.** Server verifies MAC.</br>
-**ENCRYPTED CHANNEL ESTABLISHED (symmetric keys distributed and verified)**</br>
+**ENCRYPTED CHANNEL ESTABLISHED (symmetric keys distributed)**</br>
 **12.** The continuous communication between client and server will use symmetric cryptography (AES).</br>
 ``` 
  ____________________________________________
@@ -112,3 +112,7 @@ byte[] encryptedOutput = clientCryptography.symmetricEncryption("My message");
 [...]
 
 ```
+
+## COMEPLEMENT WITH:
+- Key store.
+- Certificates and digitial signatures.
