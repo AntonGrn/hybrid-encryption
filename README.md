@@ -56,7 +56,7 @@
 [12] Encrypted messages after symmetric keys has been distributed
 (For CBC: IV can securely be sent in plaintext)
 ```
-## USER GUIDE:
+## IMPLEMENTATION:
 
 Chronological operations in relation to above notations.
 
