@@ -1,12 +1,11 @@
 # Hybrid Encryption
-For Client-Server communication.
 - Symmetric encryption (AES with CBC) and message authentication (MAC).
 - Symmetric keys are distributed using asymmetric encryption (RSA).
 - Unique keys are generated for each new TCP session.
 
 ## MOTIVATION:
 
-**GOAL:**    Use symmetric cryptography (AES) for the client-server communication.</br>
+**GOAL:**    Use symmetric cryptography (AES) for client-server communication.</br>
 **PROBLEM:**  Distribute symmetric key (AES) in secure way.</br>
 **SOLUTION:** Distribute symmetric keys (AES) using asymmetric cryptography (RSA).</br>
 
