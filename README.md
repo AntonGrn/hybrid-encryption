@@ -43,7 +43,7 @@
 **10.** Server decrypts the payload using the symmetric key variables (symmetric decryption).</br>
 **11.** Server verifies MAC.</br>
 **ENCRYPTED CHANNEL ESTABLISHED (symmetric keys distributed and verified)**</br>
-**12.** The continuous communication between client and server within the session will use symmetric cryptography (AES).</br>
+**12.** The continuous communication between client and server will use symmetric cryptography (AES).</br>
 ``` 
  ____________________________________________
 |            |            |                  |
@@ -60,7 +60,7 @@
 
 Chronological operations in relation to above notations.
 
-### [1-2] SERVER
+**[1-2] SERVER**
 
 Preconditions: 
 - Client has requested connection with server (e.g. Socket TCP handshake).
