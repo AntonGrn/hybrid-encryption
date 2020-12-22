@@ -113,6 +113,6 @@ byte[] encryptedOutput = clientCryptography.symmetricEncryption("My message");
 
 ```
 
-## COMEPLEMENT WITH:
-- Key store.
-- Certificates and digitial signatures.
+## COMPLEMENT WITH:
+- Key store
+- Certificates and digitial signatures
