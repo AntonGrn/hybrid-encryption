@@ -23,11 +23,11 @@ public class ClientCryptography {
     public void generateSymmetricKeys() throws Exception{
         // AES key:
         KeyGenerator keyGenAES = KeyGenerator.getInstance("AES");
-        keyGenAES.init(128, new SecureRandom()); // increase?
+        keyGenAES.init(128, new SecureRandom()); // Possible to increase key size.
         AES_key = keyGenAES.generateKey();
         // MAC key:
-        KeyGenerator keyGenMAC = KeyGenerator.getInstance("HMACMD5"); // AES?
-        keyGenMAC.init(128, new SecureRandom()); // increase?
+        KeyGenerator keyGenMAC = KeyGenerator.getInstance("HMACMD5");
+        keyGenMAC.init(128, new SecureRandom()); // Possible to increase key size.
         MAC_key = keyGenMAC.generateKey();
     }
 
