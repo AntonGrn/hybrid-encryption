@@ -1,5 +1,3 @@
-package com.anton.Server;
-
 import javax.crypto.Cipher;
 import javax.crypto.Mac;
 import javax.crypto.SecretKey;
