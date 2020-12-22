@@ -90,7 +90,7 @@ byte[] encryptedMsg = clientCryptography.createInitialMsg("Hello World!");
 ```java
 //Read from client: byte[] encryptedMsg
 
-String intialMsg = serverCryptography.processInitialInputMsg(encryptedMsg);
+String intialMsg = serverCryptography.processInitialMsg(encryptedMsg);
 ```
 
 **[12] Symmetric cryptography**</br>
