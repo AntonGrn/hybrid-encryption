@@ -1,6 +1,7 @@
 # Hybrid Encryption
 - Symmetric encryption (AES with CBC) and message authentication (MAC).
-- Unique secret keys are distributed using asymmetric encryption (RSA) at the initialization of each TCP session.
+- Symmetric keys are distributed using asymmetric encryption (RSA).
+- Unique keys are generated for each new TCP session.
 
 ## MOTIVATION:
 
